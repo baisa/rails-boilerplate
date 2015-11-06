@@ -3,3 +3,41 @@
 ### Rails boilerplate
 
 App for faster bootstrapping rails apps rith json. Please note `app/assets/stylsheets.css` styles - they customize main layout.
+
+### Setup
+
+* rake db:seed
+
+### Index template (will look good within layout)
+
+Name `entry` is placeholder for your model (ie. article, product, user etc.)
+```
+<%= link_to 'New Entry', new_entry_path, class: 'btn btn-primary pull-right' %>
+<h1>Entries</h1>
+<% @entries.each do |entry| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= entry.title_or_name_etc %></h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <%= entry.some %>
+      </p>
+      <p>
+        <%= entry.other %>
+      </p>
+      <p>
+        <%= entry.fields %>
+      </p>
+      <div class="btn-group pull-right" role="group" aria-label="...">
+        <%= link_to 'Edit', edit_entry_path(entry), class: 'btn btn-default' %>
+        <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      </div>
+      <div class="clearfix">
+      </div>
+    </div>
+  </div>
+<% end %>
+<%= link_to 'New Entry', new_entry_path, class: 'btn btn-primary pull-right' %>
+<div class="clearfix"></div>
+```
