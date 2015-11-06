@@ -4,6 +4,11 @@
 
 App for faster bootstrapping rails apps rith json. Please note `app/assets/stylsheets.css` styles - they customize main layout.
 
+### Branches
+
+* master - includes basic code
+* articles - includes basic articles setup
+
 ### Setup
 
 * rake db:seed
