@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsBoilerplate</title>
+  <title>Boilerplate rails</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Project name</h3>
-      </div>
-
-      <%= yield %>
-
-      <div class="row">
-        <div class="col-lg-12">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-        </div>
-
-      </div>
-
-      <footer class="footer">
-        <p>© Company 2014</p>
-      </footer>
-
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation" class="active"><a href="#">Home</a></li>
+        </ul>
+      </nav>
+      <h3 class="text-muted">Boilerplate rails</h3>
     </div>
+
+    <%= yield %>
+
+    <footer class="footer">
+      <p>© Company <%= Time.zone.now.year %></p>
+    </footer>
+
+  </div>
 
 </body>
 </html>
