@@ -5,6 +5,7 @@ class AuthorsController < ApplicationController
     respond_to do |format|
       format.html
       format.json {render json: @authors.tokens(params[:q])}
+    end
   end
 
   def show
