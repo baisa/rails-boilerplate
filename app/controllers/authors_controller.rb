@@ -2,7 +2,9 @@ class AuthorsController < ApplicationController
 
   def index
     @authors = Author.all
-    #dostep do wszytskich tripow uzytkownika
+    respond_to do |format|
+      format.html
+      format.json {render json: @authors.tokens(params[:q])}
   end
 
   def show
