@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-books = Book.create([{title: 'Anna Karenina', description: 'classic book', authors: [authors.first, authors.last]},
- {title: 'War and Peace', description: 'historical book', authors: authors.first},
- {title: 'The Ruby Way', description: 'IT book', authors: authors.last}])
-authors = Author.create([{name: 'Tolstoy', books: books.first},
-  {name: 'Dante', books: books.last}])
+books = Book.create([{title: 'Anna Karenina', description: 'classic book'},
+ {title: 'War and Peace', description: 'historical book'},
+ {title: 'The Ruby Way', description: 'IT book'}])
+authors = Author.create([{name: 'Tolstoy'},
+  {name: 'Dante'}])
