@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require jquery.tokeninput
 //= require turbolinks
-
+//= require_tree .
 //= require twitter/bootstrap
 //= require chosen-jquery
