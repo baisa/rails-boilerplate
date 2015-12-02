@@ -61,7 +61,7 @@ class NewslettersController < ApplicationController
     end
   end
 
-  def send(newsletter)
+  def deliver
     @subscribers = Subscriber.all
     SubscriberMailer.newsletter(@subscribers).deliver
   end
