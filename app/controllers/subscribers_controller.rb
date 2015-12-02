@@ -26,7 +26,7 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
-      SubscriberMailer.newsletter(@subscriber).deliver
+      #SubscriberMailer.newsletter(@subscriber).deliver
       redirect_to @subscriber, notice: "Signed up"
     else
       render :new

@@ -1,10 +1,12 @@
 class SubscriberMailer < ApplicationMailer
+ 
   default from: "yourtravelapp@gmail.com"
+
+  default to: Subscriber.all.collect(&:email).join(",")
   
+#map { |sub| sub.email }
   def newsletter(subscriber)
     @subscriber = subscriber
-
-    mail to: subscriber.email, subject: "Our new newsletter", bcc: ["barbarajoannabusse@gmail.com", "barbarajoannaslawinska@gmail.com"]
+    mail subject: "Our new newsletter"
   end
 end
-#:bcc - Who you would like to Blind-Carbon-Copy on this email, can be a string of addresses, or an array of addresses.

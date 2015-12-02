@@ -61,6 +61,10 @@ class NewslettersController < ApplicationController
     end
   end
 
+  def send(newsletter)
+    @subscribers = Subscriber.all
+    SubscriberMailer.newsletter(@subscribers).deliver
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
