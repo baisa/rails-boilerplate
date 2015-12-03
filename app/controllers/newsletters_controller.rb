@@ -63,8 +63,12 @@ class NewslettersController < ApplicationController
 
 
   def deliver
-   @subscribers = Subscriber.all
-   SubscriberMailer.newsletter(@subscribers).deliver 
+    @subscribers = Subscriber.all
+    @subscribers.each do |subscriber|
+      if subscriber.email_confirmed == true
+        SubscriberMailer.newsletter(subscriber).deliver
+      end
+    end
   end
 
   private
