@@ -1,3 +1,7 @@
 <p>Please click the link below if you wish to receive our newsletter</p>
-<p><%= link_to "Subscriber", @subscriber %></p>
+
+<%= link_to "Confirm", confirm_email_subscriber_url(@subscriber.confirm_token) %>
+
+
+
 

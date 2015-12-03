@@ -57,6 +57,22 @@ class SubscribersController < ApplicationController
     end
   end
 
+
+
+  def confirm_email
+    subscriber = Subscriber.find_by_confirm_token(params[:id])
+    if subscriber
+      subscriber.email_activate
+      flash[:success] = "Welcome"
+      redirect_to root_url
+    else
+      flash[:error] = "Sorry. User does not exist"
+      redirect_to root_url
+    end
+  end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subscriber
