@@ -3,7 +3,11 @@ before_create :confirmation_token
 
   def email_activate
     self.email_confirmed = true
-    self.confirm_token = nil
+    save!(:validate => false)
+  end
+
+  def email_deactivate
+    self.email_confirmed = false
     save!(:validate => false)
   end
 

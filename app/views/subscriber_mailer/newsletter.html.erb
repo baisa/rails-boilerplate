@@ -1,4 +1,4 @@
-
-Here is our newsletter
+<%= @newsletter.description %>
 If you do not wish to receive this newsletter any more, please unsubscribe:
 
+<%=  link_to "Unsubscribe", disconfirm_email_newsletter_url(@subscriber.confirm_token) %>

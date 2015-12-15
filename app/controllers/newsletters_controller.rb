@@ -63,11 +63,26 @@ class NewslettersController < ApplicationController
 
 
   def deliver
+    newsletter = Newsletter.find(params[:id])
     @subscribers = Subscriber.where(email_confirmed: true)
     @subscribers.each do |subscriber|
-      SubscriberMailer.newsletter(subscriber).deliver
+      SubscriberMailer.newsletter(newsletter, subscriber).deliver
     end
   end
+
+
+  def disconfirm_email
+    @subscriber = Subscriber.find_by_confirm_token(params[:id])
+    if @subscriber
+      @subscriber.email_deactivate
+      flash[:success] = "Welcome"
+      redirect_to root_url
+    else
+      flash[:error] = "Sorry. User does not exist"
+      redirect_to root_url
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
