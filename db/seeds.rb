@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+newsletters = Newsletter.create([{title: 'New pricing', description: 'We will have new pricing system.'},
+  {title: 'Great promotion', description: 'After Chrimstams we invite you for a great promotion.'},
+  {title: 'New member', description: 'Let us introduce you a new team member.'}])
+
+subscribers = Subscriber.create([{name: 'John', email: 'john@example.com', email_confirmed: true},
+  {name: 'Hanna', email: 'hanna@example.com', email_confirmed: true}, 
+  {name: 'Paul', email: 'paul@example.com', email_confirmed: false}])
