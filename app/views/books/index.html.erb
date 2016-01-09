@@ -8,6 +8,7 @@
       <p>
         <%= book.description %>
       </p>
+
       <div class="btn-group pull-right" role="group" aria-label="...">
         <%= link_to 'Edit', edit_book_path(book), class: 'btn btn-default' %>
         <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>

@@ -5,23 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.tokeninput.js"></script>
-  <link rel="stylesheet" type="text/css" href="token-input-facebook.css" />
 </head>
 <body>
   <script type="text/javascript">
-    $(document).ready(function () {
-        $("#book_author_tokens").tokenInput("/authors.json");
-        theme: 'facebook';
-        prePopulate: $('#book_author_tokens').data('load');
-    });
+    
   </script>
   <div class="container">
     <div class="header clearfix">
       <nav>
         <ul class="nav nav-pills pull-right">
           <%= menu_item('Home', '/') %> 
+          <%= menu_item('Books', '/books') %> 
+          <%= menu_item('Authors', '/authors') %> 
         </ul>
       </nav>
       <h3 class="text-muted">Boilerplate rails</h3>
