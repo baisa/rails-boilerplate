@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-newsletters = Newsletter.create([{title: 'New pricing', description: 'We will have new pricing system.'},
+newsletters = Newsletter.create([{title: 'New pricing', description: 'We will have a new pricing system.'},
   {title: 'Great promotion', description: 'After Chrimstams we invite you for a great promotion.'},
   {title: 'New member', description: 'Let us introduce you a new team member.'}])
 
