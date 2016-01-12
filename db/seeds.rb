@@ -11,4 +11,5 @@ newsletters = Newsletter.create([{title: 'New pricing', description: 'We will ha
 
 subscribers = Subscriber.create([{name: 'John', email: 'john@example.com', email_confirmed: true},
   {name: 'Hanna', email: 'hanna@example.com', email_confirmed: true}, 
+  {name: 'Peter', email: 'peter@example.com', email_confirmed: true}, 
   {name: 'Paul', email: 'paul@example.com', email_confirmed: false}])
