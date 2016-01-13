@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :newsletters
   resources :subscribers
-  root 'main#index'
+  root 'newsletters#index'
 
   resources :newsletters do
     member do
